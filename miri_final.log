@@ -1,0 +1,520 @@
+   Compiling bitcoin-primitives v0.103.1 (/Users/mac/rust-bitcoin/primitives)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.79s
+     Running unittests src/lib.rs (target/miri/aarch64-apple-darwin/debug/build/bitcoin-primitives/5e5ed48969702cae/out/bitcoin_primitives-5e5ed48969702cae)
+
+running 402 tests
+test block::tests::block_as_parts ... ok
+test block::tests::block_assume_checked ... ok
+test block::tests::block_block_hash ... ok
+test block::tests::block_cached_witness_root ... ok
+test block::tests::block_check_witness_commitment_empty_script_pubkey ... ok
+test block::tests::block_check_witness_commitment_invalid_commitment ... ok
+test block::tests::block_check_witness_commitment_invalid_witness ... ok
+test block::tests::block_check_witness_commitment_no_transactions ... ok
+test block::tests::block_check_witness_commitment_non_coinbase ... ok
+test block::tests::block_check_witness_commitment_optional ... ok
+test block::tests::block_check_witness_commitment_with_witness ... ok
+test block::tests::block_decode ... ok
+test block::tests::block_decoder_default ... ok
+test block::tests::block_decoder_error ... ok
+test block::tests::block_decoder_new ... ok
+test block::tests::block_decoder_read_limit ... ok
+test block::tests::block_decoder_rejects_aggregate_weight_over_limit ... ok
+test block::tests::block_eq ... ok
+test block::tests::block_from_hex_str_round_trip ... ok
+test block::tests::block_hash_from_block ... ok
+test block::tests::block_hash_from_block_ref ... ok
+test block::tests::block_hash_from_header ... ok
+test block::tests::block_hash_from_header_ref ... ok
+test block::tests::block_hex ... ok
+test block::tests::block_into_parts ... ok
+test block::tests::block_new_unchecked ... ok
+test block::tests::block_rejects_empty_coinbase_witness_commitment ... ok
+test block::tests::block_rejects_oversized_trailing_coinbase_witness_item ... ignored
+test block::tests::block_validation_invalid_coinbase ... ok
+test block::tests::block_validation_no_transactions ... ok
+test block::tests::block_version ... ok
+test block::tests::block_weight_wu_matches_expected ... ok
+test block::tests::can_serde_as_consensus_bincode ... ok
+test block::tests::can_serde_as_consensus_json ... ok
+test block::tests::checked_block_eq_ignores_cached_witness_root ... ok
+test block::tests::header_debug ... ok
+test block::tests::header_decoder_default ... ok
+test block::tests::header_decoder_error ... ok
+test block::tests::header_decoder_new ... ok
+test block::tests::header_decoder_read_limit ... ok
+test block::tests::header_display ... ok
+test block::tests::header_from_hex_str_round_trip ... ok
+test block::tests::header_hex ... ok
+test block::tests::header_order_matches_serialization ... ok
+test block::tests::header_size ... ok
+test block::tests::invalid_block_error ... ok
+test block::tests::merkle_tree_hash_collision ... ok
+test block::tests::parse_block_error ... ok
+test block::tests::parse_header_error ... ok
+test block::tests::soft_fork_signalling ... ok
+test block::tests::version_decodable_decoder ... ok
+test block::tests::version_decoder_default_roundtrip ... ok
+test block::tests::version_decoder_end_and_read_limit ... ok
+test block::tests::version_decoder_error ... ok
+test block::tests::version_default ... ok
+test block::tests::version_display ... ok
+test block::tests::version_encoder_emits_consensus_bytes ... ok
+test block::tests::version_is_not_signalling ... ok
+test block::tests::version_is_not_signalling_when_use_version_bit_not_set ... ok
+test block::tests::version_is_not_signalling_with_invalid_bit ... ok
+test block::tests::version_is_signalling ... ok
+test block::tests::version_to_consensus ... ok
+test block::tests::witness_commitment_from_coinbase_simple ... ok
+test block::tests::witness_commitment_from_non_coinbase_returns_none ... ok
+test hash_types::block_hash::tests::decoder_error_display ... ok
+test hash_types::block_hash::tests::decoder_full_read_limit ... ok
+test hash_types::tests::as_ref_and_borrow_match_as_byte_array ... ok
+test hash_types::tests::block_hash_byte_array_roundtrip ... ok
+test hash_types::tests::block_hash_display_roundtrip ... ok
+test hash_types::tests::block_hash_lower_hex_roundtrip ... ok
+test hash_types::tests::block_hash_upper_hex_roundtrip ... ok
+test hash_types::tests::debug ... ok
+test hash_types::tests::ntxid_byte_array_roundtrip ... ok
+test hash_types::tests::ntxid_display_roundtrip ... ok
+test hash_types::tests::ntxid_lower_hex_roundtrip ... ok
+test hash_types::tests::ntxid_upper_hex_roundtrip ... ok
+test hash_types::tests::script_hash_byte_array_roundtrip ... ok
+test hash_types::tests::script_hash_display_roundtrip ... ok
+test hash_types::tests::script_hash_lower_hex_roundtrip ... ok
+test hash_types::tests::script_hash_upper_hex_roundtrip ... ok
+test hash_types::tests::serde_human_readable_roundtrips ... ok
+test hash_types::tests::serde_non_human_readable_roundtrips ... ok
+test hash_types::tests::tx_merkle_node_byte_array_roundtrip ... ok
+test hash_types::tests::tx_merkle_node_display_roundtrip ... ok
+test hash_types::tests::tx_merkle_node_lower_hex_roundtrip ... ok
+test hash_types::tests::tx_merkle_node_upper_hex_roundtrip ... ok
+test hash_types::tests::txid_byte_array_roundtrip ... ok
+test hash_types::tests::txid_display_roundtrip ... ok
+test hash_types::tests::txid_upper_hex_roundtrip ... ok
+test hash_types::tests::witness_commitment_byte_array_roundtrip ... ok
+test hash_types::tests::witness_commitment_display_roundtrip ... ok
+test hash_types::tests::witness_commitment_lower_hex_roundtrip ... ok
+test hash_types::tests::witness_commitment_upper_hex_roundtrip ... ok
+test hash_types::tests::witness_merkle_node_byte_array_roundtrip ... ok
+test hash_types::tests::witness_merkle_node_display_roundtrip ... ok
+test hash_types::tests::witness_merkle_node_lower_hex_roundtrip ... ok
+test hash_types::tests::witness_merkle_node_upper_hex_roundtrip ... ok
+test hash_types::tests::wscript_hash_byte_array_roundtrip ... ok
+test hash_types::tests::wscript_hash_display_roundtrip ... ok
+test hash_types::tests::wscript_hash_lower_hex_roundtrip ... ok
+test hash_types::tests::wscript_hash_upper_hex_roundtrip ... ok
+test hash_types::tests::wtxid_byte_array_roundtrip ... ok
+test hash_types::tests::wtxid_display_roundtrip ... ok
+test hash_types::tests::wtxid_upper_hex_roundtrip ... ok
+test hash_types::transaction_merkle_node::tests::decoder_error_display ... ok
+test hash_types::transaction_merkle_node::tests::decoder_full_read_limit ... ok
+test hash_types::witness_merkle_node::tests::combine_delegates_to_merkle_node_trait ... ok
+test hash_types::witness_merkle_node::tests::decoder_error_display ... ok
+test hash_types::witness_merkle_node::tests::decoder_full_read_limit ... ok
+test hash_types::witness_merkle_node::tests::decoder_successfully_decodes ... ok
+test hex_codec::tests::hex_primitive_debug ... ok
+test hex_codec::tests::hex_primitive_upper_hex_with_alternate_prefix ... ok
+test merkle_tree::tests::calculate_root_correct_root_value ... ok
+test merkle_tree::tests::calculate_root_duplicate_leaves ... ok
+test merkle_tree::tests::calculate_root_empty ... ok
+test merkle_tree::tests::calculate_root_five_leaves_unbalanced ... ok
+test merkle_tree::tests::calculate_root_four_leaves ... ok
+test merkle_tree::tests::calculate_root_seven_leaves_unbalanced ... ok
+test merkle_tree::tests::calculate_root_single_leaf ... ok
+test merkle_tree::tests::calculate_root_three_leaves_unbalanced ... ok
+test merkle_tree::tests::calculate_root_two_leaves ... ok
+test merkle_tree::tests::merkle_root_batched ... ok
+test merkle_tree::tests::tx_merkle_node_2n_minus_1_unbalanced_tree ... ok
+test merkle_tree::tests::tx_merkle_node_balanced_multi_level_tree ... ok
+test merkle_tree::tests::tx_merkle_node_duplicate_leaves ... ok
+test merkle_tree::tests::tx_merkle_node_empty ... ok
+test merkle_tree::tests::tx_merkle_node_oversize_tree ... ok
+test merkle_tree::tests::tx_merkle_node_single_leaf ... ok
+test merkle_tree::tests::tx_merkle_node_two_leaves ... ok
+test merkle_tree::tests::witness_merkle_node_duplicate_leaves ... ok
+test merkle_tree::tests::witness_merkle_node_single_leaf ... ok
+test opcodes::tests::opcode_to_u8_from_u8_roundtrip ... ok
+test script::builder::tests::display_delegates_to_script ... ok
+test script::builder::tests::from_vec ... ok
+test script::builder::tests::push_slice_minimal ... ok
+test script::builder::tests::push_slice_non_minimal ... ok
+test script::builder::tests::push_slice_pushdata1_and_pushdata2 ... ok
+test script::builder::tests::push_slice_pushdata4_boundary ... ignored
+test script::builder::tests::push_slice_pushdata4_length_bytes ... ignored
+test script::owned::tests::as_byte_vec_deref_restores ... ok
+test script::owned::tests::reserved_len_for_slice ... ok
+test script::push_bytes::tests::push_bytes_as_mut_bytes ... ok
+test script::push_bytes::tests::push_bytes_asref_array ... ok
+test script::push_bytes::tests::push_bytes_buf_as_push_bytes ... ok
+test script::push_bytes::tests::push_bytes_buf_clear ... ok
+test script::push_bytes::tests::push_bytes_buf_deref ... ok
+test script::push_bytes::tests::push_bytes_buf_extend_from_slice ... ok
+test script::push_bytes::tests::push_bytes_buf_from_array ... ok
+test script::push_bytes::tests::push_bytes_buf_into_vec ... ok
+test script::push_bytes::tests::push_bytes_buf_push_and_pop ... ok
+test script::push_bytes::tests::push_bytes_buf_remove ... ok
+test script::push_bytes::tests::push_bytes_buf_reserve ... ok
+test script::push_bytes::tests::push_bytes_buf_to_owned ... ok
+test script::push_bytes::tests::push_bytes_buf_truncate ... ok
+test script::push_bytes::tests::push_bytes_buf_try_from_vec ... ok
+test script::push_bytes::tests::push_bytes_buf_with_capacity ... ok
+test script::push_bytes::tests::push_bytes_check_limit_boundary ... ignored
+test script::push_bytes::tests::push_bytes_empty_inits ... ok
+test script::push_bytes::tests::push_bytes_from_array ... ok
+test script::push_bytes::tests::push_bytes_index ... ok
+test script::push_bytes::tests::push_bytes_try_from_slice ... ok
+test script::tests::cow_owned_to_script_buf ... ok
+test script::tests::cow_script_buf_to_box_script ... ok
+test script::tests::cow_script_buf_to_script ... ok
+test script::tests::cow_script_to_box_script ... ok
+test script::tests::cow_script_to_script_buf ... ok
+test script::tests::decoder_error_display ... ok
+test script::tests::decoder_full_read_limit ... ok
+test script::tests::encode ... ok
+test script::tests::hex ... ok
+test script::tests::index ... ok
+test script::tests::index_bound_tuple ... ok
+test script::tests::legacy_opcode ... ok
+test script::tests::new_op_return ... ok
+test script::tests::new_p2a ... ok
+test script::tests::new_p2sh ... ok
+test script::tests::new_p2wsh ... ok
+test script::tests::op_return ... ok
+test script::tests::partial_ord ... ok
+test script::tests::provably_unspendable ... ok
+test script::tests::pushdata_end_conditions ... ok
+test script::tests::redeem_script_size_error ... ok
+test script::tests::script_as_mut ... ok
+test script::tests::script_as_ref ... ok
+test script::tests::script_asm ... ok
+test script::tests::script_buf_as_mut ... ok
+test script::tests::script_buf_as_mut_script ... ok
+test script::tests::script_buf_as_ref ... ok
+test script::tests::script_buf_as_script ... ok
+test script::tests::script_buf_borrow_mut ... ok
+test script::tests::script_buf_capacity ... ok
+test script::tests::script_buf_default ... ok
+test script::tests::script_buf_display ... ok
+test script::tests::script_buf_from_bytes ... ok
+test script::tests::script_buf_from_vec_u8 ... ok
+test script::tests::script_buf_into_boxed_script ... ok
+test script::tests::script_buf_into_bytes ... ok
+test script::tests::script_buf_reserve ... ok
+test script::tests::script_buf_reserve_exact ... ok
+test script::tests::script_buf_to_hex ... ok
+test script::tests::script_builder ... ok
+test script::tests::script_consensus_decode_empty ... ok
+test script::tests::script_consensus_decode_empty_with_more_data ... ok
+test script::tests::script_display ... ok
+test script::tests::script_display_pushdata ... ok
+test script::tests::script_from_bytes ... ok
+test script::tests::script_from_bytes_mut ... ok
+test script::tests::script_hash_from_script ... ok
+test script::tests::script_hash_from_script_rejects_segwit_v1_plus ... ok
+test script::tests::script_hash_from_script_unchecked ... ok
+test script::tests::script_is_empty ... ok
+test script::tests::script_is_p2a ... ok
+test script::tests::script_is_p2wpkh ... ok
+test script::tests::script_is_p2wsh ... ok
+test script::tests::script_is_witness_program ... ok
+test script::tests::script_json_serialize ... ok
+test script::tests::script_len ... ok
+test script::tests::script_p2sh_p2pkh_template ... ok
+test script::tests::script_pubkey_buf_display_and_debug ... ok
+test script::tests::script_pubkey_display_and_debug ... ok
+test script::tests::script_to_arc ... ok
+test script::tests::script_to_hex ... ok
+test script::tests::script_to_owned ... ok
+test script::tests::script_to_rc ... ok
+test script::tests::script_to_vec ... ok
+test script::tests::try_from_script_buf_for_wscript_hash ... ok
+test script::tests::try_from_script_buf_ref_for_wscript_hash ... ok
+test script::tests::try_from_script_for_scripthash ... ok
+test script::tests::try_from_script_for_wscript_hash ... ok
+test script::tests::try_from_scriptpubkeybuf_for_scripthash ... ok
+test script::tests::try_from_scriptpubkeybuf_ref_for_scripthash ... ok
+test script::tests::witness_script_size_error ... ok
+test script::tests::witness_to_signet_script ... ok
+test script::tests::witness_version_valid ... ok
+test script::tests::wscript_hash_from_script ... ok
+test script::tests::wscript_hash_from_script_unchecked ... ok
+test transaction::tests::accept_coinbase_scriptsig_max_valid ... ok
+test transaction::tests::accept_coinbase_scriptsig_min_valid ... ok
+test transaction::tests::accept_output_value_sum_equal_to_max_money ... ok
+test transaction::tests::accept_transaction_at_maximum_block_weight ... ignored
+test transaction::tests::canonical_vout ... ok
+test transaction::tests::compute_ntxid_ignores_script_sig_and_witness ... ok
+test transaction::tests::compute_ntxid_matches_coinbase_txid ... ok
+test transaction::tests::compute_ntxid_preserves_coinbase_script_sig ... ok
+test transaction::tests::compute_wtxid_commits_to_oversized_witness_elements ... ok
+test transaction::tests::ntxid ... ok
+test transaction::tests::out_point_decoder_default_read_limit ... ok
+test transaction::tests::out_point_decoder_error ... ok
+test transaction::tests::out_point_serde_big_endian_roundtrip ... ok
+test transaction::tests::out_point_serde_deserialize_human_readable ... ok
+test transaction::tests::out_point_serde_deserialize_non_human_readable ... ok
+test transaction::tests::out_point_serde_human_readable_rountrips ... ok
+test transaction::tests::out_point_serde_non_human_readable_rountrips ... ok
+test transaction::tests::outpoint ... ok
+test transaction::tests::outpoint_display_roundtrip ... ok
+test transaction::tests::outpoint_format ... ok
+test transaction::tests::outpoint_from_str ... ok
+test transaction::tests::outpoint_from_str_too_long ... ok
+test transaction::tests::parse_out_point_format_error ... ok
+test transaction::tests::parse_out_point_too_long_error ... ok
+test transaction::tests::parse_out_point_txid_error ... ok
+test transaction::tests::parse_out_point_vout_error ... ok
+test transaction::tests::parse_out_point_vout_not_canonical_error ... ok
+test transaction::tests::reject_coinbase_scriptsig_too_large ... ok
+test transaction::tests::reject_coinbase_scriptsig_too_small ... ok
+test transaction::tests::reject_duplicate_inputs ... ok
+test transaction::tests::reject_null_prevout_in_non_coinbase_transaction ... ok
+test transaction::tests::reject_output_value_greater_than_max_money ... ok
+test transaction::tests::reject_output_value_sum_too_large ... ok
+test transaction::tests::reject_transaction_exceeding_maximum_block_weight ... ignored
+test transaction::tests::reject_transaction_with_no_outputs ... ok
+test transaction::tests::sanity_check ... ok
+test transaction::tests::segwit_invalid_transaction ... ok
+test transaction::tests::transaction_decoder_coinbase_script_sig_too_large_error ... ok
+test transaction::tests::transaction_decoder_coinbase_script_sig_too_small_error ... ok
+test transaction::tests::transaction_decoder_duplicate_input_error ... ok
+test transaction::tests::transaction_decoder_early_end_inputs_error ... ok
+test transaction::tests::transaction_decoder_early_end_locktime_error ... ok
+test transaction::tests::transaction_decoder_early_end_outputs_error ... ok
+test transaction::tests::transaction_decoder_early_end_segwit_flag_error ... ok
+test transaction::tests::transaction_decoder_early_end_version_error ... ok
+test transaction::tests::transaction_decoder_early_end_witnesses_error ... ok
+test transaction::tests::transaction_decoder_end_after_error_panics - should panic ... ok
+test transaction::tests::transaction_decoder_inputs_error ... ok
+test transaction::tests::transaction_decoder_lock_time_error ... ok
+test transaction::tests::transaction_decoder_no_outputs_error ... ok
+test transaction::tests::transaction_decoder_no_witnesses_error ... ok
+test transaction::tests::transaction_decoder_null_prevout_in_non_coinbase_error ... ok
+test transaction::tests::transaction_decoder_output_value_sum_too_large_error ... ok
+test transaction::tests::transaction_decoder_outputs_error ... ok
+test transaction::tests::transaction_decoder_push_bytes_after_done_is_false ... ok
+test transaction::tests::transaction_decoder_push_bytes_after_error_panics - should panic ... ok
+test transaction::tests::transaction_decoder_push_bytes_inputs_needs_more ... ok
+test transaction::tests::transaction_decoder_push_bytes_lock_time_completes ... ok
+test transaction::tests::transaction_decoder_push_bytes_lock_time_needs_more ... ok
+test transaction::tests::transaction_decoder_push_bytes_outputs_needs_more ... ok
+test transaction::tests::transaction_decoder_push_bytes_segwit_flag_empty_needs_more ... ok
+test transaction::tests::transaction_decoder_push_bytes_version_needs_more ... ok
+test transaction::tests::transaction_decoder_push_bytes_witnesses_needs_more ... ok
+test transaction::tests::transaction_decoder_read_limit ... ok
+test transaction::tests::transaction_decoder_rejects_unsupported_segwit_flag ... ok
+test transaction::tests::transaction_decoder_unsupported_segwit_flag_error ... ok
+test transaction::tests::transaction_decoder_version_error ... ok
+test transaction::tests::transaction_decoder_witness_error ... ok
+test transaction::tests::transaction_end_rejects_null_prevout_at_nonzero_index ... ok
+test transaction::tests::transaction_from_hex_str_error ... ok
+test transaction::tests::transaction_from_hex_str_round_trip ... ok
+test transaction::tests::transaction_functions ... ok
+test transaction::tests::transaction_hex_display ... ok
+test transaction::tests::transaction_version ... ok
+test transaction::tests::transaction_weight_matches_expected ... ok
+test transaction::tests::tx_no_input_deserialization ... ok
+test transaction::tests::txid_from_transaction_matches_compute_txid ... ok
+test transaction::tests::txin ... ok
+test transaction::tests::txin_decoder_first_error ... ok
+test transaction::tests::txin_decoder_read_limit ... ok
+test transaction::tests::txin_decoder_second_error ... ok
+test transaction::tests::txin_decoder_third_error ... ok
+test transaction::tests::txout_decoder_first_error ... ok
+test transaction::tests::txout_decoder_read_limit ... ok
+test transaction::tests::txout_decoder_second_error ... ok
+test transaction::tests::version_decoder_default_read_limit ... ok
+test transaction::tests::version_decoder_error ... ok
+test transaction::tests::version_display ... ok
+test transaction::tests::witnesses_encoder_empty_inputs ... ok
+test transaction::tests::wtxid_from_transaction_matches_compute_wtxid ... ok
+test witness::test::decode_1_byte_from_bigger_slice ... ok
+test witness::test::decode_3_byte_from_bigger_slice ... ok
+test witness::test::decode_5_byte_from_bigger_slice ... ok
+test witness::test::decode_9_byte_from_bigger_slice ... ok
+test witness::test::decode_buffer_resizing ... ok
+test witness::test::decode_empty_element ... ok
+test witness::test::decode_empty_witness ... ok
+test witness::test::decode_from_3_byte_slice_endianness ... ok
+test witness::test::decode_from_3_byte_slice_lower_bound ... ok
+test witness::test::decode_from_3_byte_slice_three_over_lower_bound ... ok
+test witness::test::decode_from_3_byte_slice_upper_bound ... ok
+test witness::test::decode_from_5_byte_slice_endianness ... ok
+test witness::test::decode_from_5_byte_slice_lower_bound ... ok
+test witness::test::decode_from_5_byte_slice_upper_bound ... ok
+test witness::test::decode_from_9_byte_slice_endianness ... ok
+test witness::test::decode_from_9_byte_slice_lower_bound ... ok
+test witness::test::decode_from_9_byte_slice_upper_bound ... ok
+test witness::test::decode_from_empty_slice_panics - should panic ... ok
+test witness::test::decode_incomplete_element_data ... ok
+test witness::test::decode_incomplete_element_length ... ok
+test witness::test::decode_incomplete_witness_count ... ok
+test witness::test::decode_length_prefix_error ... ok
+test witness::test::decode_max_serialized_size ... ignored
+test witness::test::decode_multiple_empty_elements ... ok
+test witness::test::decode_non_minimal_panics - should panic ... ok
+test witness::test::decode_rejects_witness_over_limit_due_to_aggregate_data ... ignored
+test witness::test::decode_rejects_witness_over_limit_due_to_prefix_overhead ... ignored
+test witness::test::decode_single_element ... ok
+test witness::test::decode_value_1_byte ... ok
+test witness::test::decode_witness_many_calls ... ok
+test witness::test::decode_witness_one_single_call ... ok
+test witness::test::decoder_end_without_witness_count_errors ... ok
+test witness::test::decoder_read_limit ... ok
+test witness::test::decoder_unexpected_eof_error ... ok
+test witness::test::dos_protection ... ok
+test witness::test::element_length_limit_applies_to_every_element ... ok
+test witness::test::empty_witness_lower_hex ... ok
+test witness::test::encode ... ok
+test witness::test::encode_empty ... ok
+test witness::test::encodes_using_correct_chunks ... ok
+test witness::test::exact_sized_iterator ... ok
+test witness::test::from_hex ... ok
+test witness::test::from_iter_does_not_silently_lose_elements ... ignored
+test witness::test::get_rejects_index_arithmetic_overflow ... ok
+test witness::test::iter_next_none_if_cursor_decode_fails ... ok
+test witness::test::iter_next_none_if_element_len_too_big ... ok
+test witness::test::oversized_element_does_not_compare_equal_to_different_stack ... ok
+test witness::test::oversized_public_witness_size_matches_encoding_length ... ok
+test witness::test::partial_eq ... ok
+test witness::test::partial_eq_for_slice ... ok
+test witness::test::partial_eq_len_mismatch ... ok
+test witness::test::push ... ok
+test witness::test::serde_bincode_backward_compatibility ... ok
+test witness::test::serde_bincode_roundtrips ... ok
+test witness::test::serde_does_not_trust_size_hint ... ok
+test witness::test::serde_human ... ok
+test witness::test::serde_human_roundtrips ... ok
+test witness::test::size_matches_encoding_length ... ok
+test witness::test::witness_debug ... ok
+test witness::test::witness_encoder_len_matches_encoding_length ... ok
+test witness::test::witness_from_array_impl ... ok
+test witness::test::witness_from_impl ... ok
+test witness::test::witness_from_iterator ... ok
+test witness::test::witness_lower_hex ... ok
+test witness::test::witness_single_empty_element ... ok
+test witness::test::witness_size ... ok
+test witness::test::witness_upper_hex ... ok
+test witness_version::tests::witness_version_fmt ... ok
+test witness_version::tests::witness_version_from_str ... ok
+test witness_version::tests::witness_version_into_opcode ... ok
+test witness_version::tests::witness_version_opcode_round_trip ... ok
+test witness_version::tests::witness_version_serde_invalid ... ok
+test witness_version::tests::witness_version_serde_round_trip ... ok
+test witness_version::tests::witness_version_to_num ... ok
+test witness_version::tests::witness_version_try_from_opcode ... ok
+test witness_version::tests::witness_version_try_from_u8 ... ok
+
+test result: ok. 392 passed; 0 failed; 10 ignored; 0 measured; 0 filtered out; finished in 977.40s
+
+     Running tests/api.rs (target/miri/aarch64-apple-darwin/debug/build/bitcoin-primitives/3da26129e7c7988a/out/api-3da26129e7c7988a)
+
+running 24 tests
+test c_debug_nonempty ... ok
+test c_good_err_display ... ok
+test c_object ... ok
+test c_send_sync ... ok
+test c_serde ... ok
+test p_arbitrary ... ok
+test p_consistent_exports_block ... ok
+test p_consistent_exports_crate_modules ... ok
+test p_consistent_exports_crate_types ... ok
+test p_consistent_exports_locktime ... ok
+test p_consistent_exports_locktime_absolute ... ok
+test p_consistent_exports_locktime_relative ... ok
+test p_consistent_exports_merkle_tree ... ok
+test p_consistent_exports_opcodes ... ok
+test p_consistent_exports_script ... ok
+test p_consistent_exports_transaction ... ok
+test p_consistent_exports_units_amount ... ok
+test p_consistent_exports_units_amount_error ... ok
+test p_consistent_exports_units_modules ... ok
+test p_consistent_exports_units_types ... ok
+test p_consistent_exports_witness ... ok
+test p_consistent_exports_witness_version ... ok
+test p_decoders_implement_new ... ok
+test p_default_change ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.17s
+
+     Running tests/block.rs (target/miri/aarch64-apple-darwin/debug/build/bitcoin-primitives/24a9f107e9d459ce/out/block-24a9f107e9d459ce)
+
+running 1 test
+test static_vector ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.22s
+
+     Running tests/encoding.rs (target/miri/aarch64-apple-darwin/debug/build/bitcoin-primitives/77a64509dc264af2/out/encoding-77a64509dc264af2)
+
+running 11 tests
+test decode_nonsegwit_transaction ... ok
+test decode_segwit_transaction ... ok
+test decode_segwit_without_witnesses_errors ... ok
+test decode_zero_inputs ... ok
+test encode_block ... ok
+test encode_non_segwit_transaction ... ok
+test encode_out_point ... ok
+test encode_segwit_transaction ... ok
+test encode_tx_in ... ok
+test encode_tx_out ... ok
+test transaction_encode_decode_roundtrip ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.12s
+
+   Doc-tests bitcoin_primitives
+
+running 32 tests
+test primitives/src/../include/decoder_newtype.rs - decoder_newtype (line 36) ... ignored
+test primitives/src/../include/decoder_newtype.rs - decoder_newtype (line 52) ... ignored
+test primitives/src/../include/decoder_newtype.rs - decoder_newtype (line 70) ... ignored
+test primitives/src/block.rs - block::Checked (line 478) - compile fail ... ok
+test primitives/src/block.rs - block::Checked (line 470) ... ok
+test primitives/src/hash_types/script_hash.rs - hash_types::script_hash::ScriptHash::from_script (line 62) ... ok
+test primitives/src/block.rs - block::Header::block_hash (line 724) ... ok
+test primitives/src/block.rs - block::Block<Unchecked>::check_witness_commitment (line 345) ... ok
+test primitives/src/block.rs - block::Block<Unchecked>::assume_checked (line 172) ... ok
+test primitives/src/block.rs - block (line 12) ... ok
+test primitives/src/block.rs - block::Block<Unchecked>::validate (line 244) ... ok
+test primitives/src/hash_types/witness_script_hash.rs - hash_types::witness_script_hash::WScriptHash::from_script (line 48) ... ok
+test primitives/src/lib.rs - (line 19) ... ok
+test primitives/src/opcodes.rs - opcodes::Opcode (line 31) ... ok
+test primitives/src/script/builder.rs - script::builder::Builder (line 18) ... ok
+test primitives/src/script/mod.rs - script (line 7) ... ok
+test primitives/src/script/owned.rs - script::owned::ScriptBuf<T>::push_slice_non_minimal (line 235) ... ok
+test primitives/src/script/owned.rs - script::owned::ScriptBuf<T>::push_slice (line 193) ... ok
+test primitives/src/script/owned.rs - script::owned::ScriptBuf<T>::new_p2wsh (line 352) ... ok
+test primitives/src/script/owned.rs - script::owned::ScriptPubKeyBuf::new_op_return (line 304) ... ok
+test primitives/src/script/push_bytes.rs - script::push_bytes::primitive::PushBytes (line 56) ... ok
+test primitives/src/script/push_bytes.rs - script::push_bytes::primitive::PushBytesBuf (line 237) ... ok
+test primitives/src/script/owned.rs - script::owned::ScriptPubKeyBuf::new_p2sh (line 322) ... ok
+test primitives/src/witness.rs - witness (line 11) ... ok
+test primitives/src/witness.rs - witness (line 30) ... ok
+test primitives/src/witness.rs - witness::Witness::from_hex (line 322) ... ok
+test primitives/src/witness.rs - witness::Witness::from_slice (line 139) ... ok
+test primitives/src/witness.rs - witness::Witness::get_back (line 279) ... ok
+test primitives/src/witness.rs - witness::Witness::push (line 225) ... ok
+test primitives/src/witness.rs - witness::Witness::size (line 197) ... ok
+test primitives/src/witness_version.rs - witness_version::WitnessVersion (line 36) ... ok
+test primitives/src/transaction.rs - transaction (line 15) ... ok
+
+test result: ok. 29 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.73s
+
+      878.00 real       864.87 user         6.39 sys
+           826884096  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1065052  page reclaims
+               22166  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   1  signals received
+                3038  voluntary context switches
+              239071  involuntary context switches
+          1015383617  instructions retired
+           409375998  cycles elapsed
+            17695320  peak memory footprint

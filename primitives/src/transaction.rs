@@ -2356,12 +2356,11 @@ mod tests {
         let err = decoder.end().unwrap_err();
         assert_eq!(err, TransactionDecoderError(TransactionDecoderErrorInner::NoOutputs));
     }
-    #[cfg(feature = "alloc")]
+    
     #[test]
+    #[cfg(feature = "alloc")]
     #[cfg_attr(miri, ignore)]
     fn reject_transaction_exceeding_maximum_block_weight() {
-        // Allocating a buffer this large under Miri's interpreter takes far too long for CI.
-
         let script_len = 600_000usize;
         let mut tx_bytes = Vec::new();
 
@@ -2417,11 +2416,11 @@ mod tests {
         // weight  = 72 * 4 + 110 = 398
         assert_eq!(transaction_weight(&tx).to_wu(), 398);
     }
-    #[cfg(feature = "alloc")]
+    
     #[test]
+    #[cfg(feature = "alloc")]
     #[cfg_attr(miri, ignore)] 
     fn accept_transaction_at_maximum_block_weight() {
-        // Allocating a buffer this large under Miri's interpreter takes far too long for CI.
         // A base size of 1,000,000 bytes gives a weight of exactly MAX_BLOCK_WEIGHT, which the
         // `weight > MAX_BLOCK_WEIGHT` boundary in `end` must accept rather than reject.
         let script_len = 999_936usize;

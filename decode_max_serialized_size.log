@@ -1,0 +1,5 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.09s
+     Running unittests src/lib.rs (target/miri/aarch64-apple-darwin/debug/build/bitcoin-primitives/5e5ed48969702cae/out/bitcoin_primitives-5e5ed48969702cae)
+
+running 1 test
+test witness::test::decode_max_serialized_size ... 

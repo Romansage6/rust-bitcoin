@@ -2192,6 +2192,7 @@ mod tests {
 
     #[test]
     #[cfg(feature = "alloc")]
+    #[cfg_attr(miri, ignore)]
     fn block_rejects_oversized_trailing_coinbase_witness_item() {
         let reserved = [11u8; 32];
         let mut txin = crate::TxIn::EMPTY_COINBASE;
@@ -2346,11 +2347,10 @@ mod tests {
         assert!(std::error::Error::source(&err_second).is_some());
     }
 
-    #[cfg(feature = "alloc")]
+    
     #[test]
-    #[cfg_attr(miri, ignore)]
+    #[cfg(feature = "alloc")]
     fn block_decoder_rejects_aggregate_weight_over_limit() {
-        // Allocating ~1 MB of script_sig data blows up Miri's runtime; see #6982.
         fn large_transaction(tag: u8) -> Transaction {
             Transaction {
                 version: crate::transaction::Version::ONE,

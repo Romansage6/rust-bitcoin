@@ -1647,6 +1647,7 @@ mod test {
 
     #[test]
     #[cfg(feature = "alloc")]
+    #[cfg_attr(miri, ignore)]
     fn decode_max_serialized_size() {
         let element_len = MAX_WITNESS_SIZE
             - crate::compact_size_encode(1usize).as_slice().len()
@@ -2063,11 +2064,10 @@ mod test {
         assert!(dec.push_bytes(&mut encoded.as_slice()).is_err());
     }
 
-    #[cfg(feature = "alloc")]
     #[test]
+    #[cfg(feature = "alloc")]
     #[cfg_attr(miri, ignore)]
     fn decode_rejects_witness_over_limit_due_to_aggregate_data() {
-            // Allocating a buffer this large under Miri's interpreter takes far too long for CI.    
         let element_len = MAX_WITNESS_ITEM_SIZE / 2 + 1;
 
         let mut first = Vec::new();
@@ -2091,12 +2091,10 @@ mod test {
         );
     }
 
-    #[cfg(feature = "alloc")]
     #[test]
+    #[cfg(feature = "alloc")]   
     #[cfg_attr(miri, ignore)]
     fn decode_rejects_witness_over_limit_due_to_prefix_overhead() {
-        // Allocating a buffer this large under Miri's interpreter takes far too long for CI.
-
         let count = MAX_WITNESS_SIZE;
         let mut encoded = Vec::new();
         encoded.extend_from_slice(crate::compact_size_encode(count).as_slice());
